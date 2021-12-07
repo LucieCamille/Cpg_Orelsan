@@ -1,0 +1,50 @@
+header{
+    max-width: $max-width2;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+
+    ::before{
+        content: "";
+        background-image: url(/img/fond_header.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 100%;
+        z-index: -1;
+    }
+
+    nav{
+        margin-bottom: 0.5em;
+        margin-right: 5em;
+
+        a{
+        text-decoration: none;
+        color: white;
+        padding: 0.5em 2em 0.5em 2em;
+        margin: 0;
+        }
+
+        a.active {
+         color: black;
+         background-color: white;
+        }
+
+        a:hover {
+         color: black;
+         background-color: white;
+        }
+
+    }
+
+
+}

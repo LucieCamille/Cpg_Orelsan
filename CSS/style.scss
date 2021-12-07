@@ -1,0 +1,84 @@
+$max-width1: 1440px;
+$max-width2:980px;
+$color-red: #AC2529;
+
+@mixin button {
+    color: $color-red;
+    border: solid $color-red 1px;
+    text-decoration: none;
+    text-align: center !important;
+    display: inline-block;
+    }
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@font-face {
+    font-family: "Montserrat";
+    src: url(/font/montserrat-regular-webfont.woff);
+}
+
+:root{
+    font-size: 16px;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+
+    h1{
+        font-size: 2em;
+        font-family: "Oswald", sans-serif;
+        font-weight: 800;
+        text-transform: capitalize;
+    }
+
+    h2{
+        font-size: 1em;
+        font-family: "Oswald", sans-serif;
+        text-transform: capitalize;
+    }
+
+    aside{
+        position: fixed;
+        right: 5vw;
+        bottom: 60vh;
+        display: flex;
+        flex-direction: column;
+            a{
+                display: block;
+                text-decoration: none;
+                padding: 0.5em;
+                margin-bottom: 0.3em;
+                width: 1em;
+                height: 1em;
+                font-size: 1em;
+                border-radius: 100%;
+                background-color: white;
+                &:hover{
+                    background-color: $color-red;
+                }
+
+                i{
+                    color: black;
+                }
+            }
+
+    }
+
+    .btn{
+        @include button;
+    }
+}
+
+
+@import "_header";
+@import "_footer";
+@import "_index";
+@import "_album";
+@import "_reservation";

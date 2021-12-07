@@ -1,0 +1,37 @@
+main#album{
+    max-width: $max-width2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    section.centre{
+        padding-bottom: 1em;
+        h1{
+            text-align: center;
+        }
+    }
+
+    section.left{
+        padding-bottom: 1em;
+
+        img{
+            height: 150px;
+            float: left;
+            margin-right: 1em;
+            padding: 0.5em;
+        }
+    }
+
+    section.right{
+        padding-bottom: 1em;
+
+        img{
+            height: 150px;
+            float: right;
+            margin-left: 1em;
+            padding: 0.5em;
+        }
+    }
+
+}
