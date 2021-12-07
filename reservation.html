@@ -85,15 +85,14 @@
       <section id="form">
         <h1>Réservation</h1>
         <form action="#" method="post">
-          <fieldset>
-          <legend>Coordonnées</legend>
-          <label for="name_fld">Nom*</label>
+          <h2 class="after_long">Coordonnées</h2>
+          <label for="name_fld">Nom* </label>
           <input type="text" name="name_fld" id="name_fld" required/>
 
-          <label for="first_name_fld">Prénom*</label>
+          <label for="first_name_fld">Prénom* </label>
           <input type="text" name="first_name_fld" id="first_name_fld" required/>
 
-          <label for="mail_fld">E-mail*</label>
+          <label for="mail_fld">E-mail* </label>
           <input
             type="email"
             name="mail_fld"
@@ -102,14 +101,12 @@
             required
           />
 
-          <label for="phone_fld">Téléphone*</label>
+          <label for="phone_fld">Téléphone* </label>
           <input type="tel" name="phone_fld" id="phone_fld" required/>
-        </fieldset>
         </form>
         <form action="#" method="post">
-          <fieldset>
-          <legend>Votre Ticket</legend>
-          <label for="ville_fld">Ville*</label>
+          <h2 class="after_long">Votre Ticket</h2>
+          <label for="ville_fld">Ville* </label>
 
           <select name="city_fld" id="city_fld">
             <option value="Paris">Paris</option>
@@ -120,27 +117,25 @@
             <option value="Toulouse">Toulouse</option>
           </select>
 
-          <label for="date_fld">Date du concert*</label>
+          <label for="date_fld">Date du concert* </label>
           <input type="date" name="date_fld" id="date_fld" required/>
 
-          <label for="nbre_fld">Nombre de tickets*</label>
+          <label for="nbre_fld">Nombre de tickets* </label>
           <input type="number" name="nbre_fld" id="nbre_fld" min="0" value="0" max="10"/>
-        </fieldset>
         </form>
         <form action="#" method="post">
-          <fieldset>
-          <legend>Créer un compte</legend>
-          <label for="login_fld">Login*</label>
+          <h2 class="after_court">Créer un compte</h2>
+          <label for="login_fld">Login* </label>
           <input type="text" name="login_fld" id="login_fld" required/>
 
-          <label for="password_fld">Mot de passe*</label>
+          <label for="password_fld">Mot de passe* </label>
           <input type="password" name="password_fld" id="password_fld" required/>
-          </fieldset>
         </form>
+        <div id="button">
+          <button type="cancel" class="btn">Annuler</button>
+          <button type="Submit" class="btn">Commander</button>
+        </div>
       </section>
-
-      <button type="cancel" class="btn">Annuler</button>
-      <button type="Submit" class="btn">Commander</button>
     </main>
 
     <footer>

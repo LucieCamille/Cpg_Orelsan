@@ -4,6 +4,7 @@ main#reservation{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 1em;
 
     section{
         h1{
@@ -34,9 +35,8 @@ main#reservation{
 
                 td, th{
                     text-align: left;
-                    width: 10em;
+                    width: 100%;
                     height: 1em;
-                    padding: 0.5em;
                 }
 
                 tr{
@@ -48,50 +48,86 @@ main#reservation{
 
     }
     section#form{
-        max-width: 400px;
+        max-width: $max-width2;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        h1{
+        /*h1{
             text-align: center;
-        }
+        }*/
 
         form{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
+            min-height: 170px;
+            //max-height: 200px;
+            max-width: 400px;
+            width: 100%;
+            padding-bottom: 1em;
 
-            fieldset{
-                display: inline-block; /* A retravailler */
-
-                legend{
-                /*position: relative;*/
-                background-color: white;
-                font-weight: 300;
-                color: $color-red;
-                text-transform: capitalize;
-                letter-spacing: 5px;
-                padding: 0.5em;
-
-                /*&::after {
+            h2{
+            align-self: flex-start;
+            display: block;
+            position: relative;
+            background-color: white;
+            font-weight: 300;
+            color: $color-red;
+            letter-spacing: 3px;
+            padding: 0.5em;
+            width: 100%;
+            
+                &.after_long{
+                 &::after {
                     content: "";
                     background-color: #464D57;
-                    opacity: 0.8;
+                    opacity: 0.4;
                     display: block;
                     position: absolute;
                     top: 50%;
-                    left: -15%;
+                    left: 31%;
                     height: 2px;
-                    width: 420px;
+                    width: 240px;
                     flex: 1;
-                    z-index: -1;
-                    }*/
+                    }
+                }
+                &.after_court{
+                   &::after {
+                    content: "";
+                    background-color: #464D57;
+                    opacity: 0.4;
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 40%;
+                    height: 2px;
+                    width: 205px;
+                    flex: 1;
+                    }
+                }
+
+                &::before{
+                    content: "";
+                    background-color: #464D57;
+                    opacity: 0.4;
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: -3%;
+                    height: 2px;
+                    width: 15px;
+                    flex: 1;
                 }
             }
 
             label{
                 width: 50%;
                 text-align: right;
+                //box-sizing: border-box;
+                //padding: 0.2em;
             }
 
             input, select{
@@ -99,6 +135,21 @@ main#reservation{
                 box-sizing: border-box;
             }
         }
+
+        div#button{
+            display: flex;
+            justify-content: center;
+                button{
+                max-width: 6em;
+                background-color: #fff;
+                margin-left: 0.5em;
+                &:hover{
+                    background-color: $color-red;
+                    color: #fff;
+                    }
+                }
+        }
+
 
     }
 }

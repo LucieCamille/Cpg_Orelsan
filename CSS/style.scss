@@ -7,7 +7,11 @@ $color-red: #AC2529;
     border: solid $color-red 1px;
     text-decoration: none;
     text-align: center !important;
-    display: inline-block;
+    padding: 0.5em;
+    &:hover{
+        background-color: $color-red;
+        color: #fff;
+        }
     }
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
@@ -35,13 +39,13 @@ body{
         font-size: 2em;
         font-family: "Oswald", sans-serif;
         font-weight: 800;
-        text-transform: capitalize;
+        text-transform: uppercase;
     }
 
     h2{
         font-size: 1em;
         font-family: "Oswald", sans-serif;
-        text-transform: capitalize;
+        text-transform: uppercase;
     }
 
     aside{
@@ -73,7 +77,9 @@ body{
 
     .btn{
         @include button;
-    }
+        box-sizing: content-box !important;
+        width: 100%;
+        }
 }
 
 
